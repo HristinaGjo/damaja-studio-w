@@ -210,8 +210,32 @@ a{
         color: #f2f2f2;
     }
 
+    .header{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 0 1em;
+    }
+
+    .text p{
+        visibility: hidden;
+        position: relative;
+        font-size: 18px;
+        font-style: italic;
+    }
+
+    .gallery{
+        width: 100%;
+        height:100vh;
+        position: relative;
+    }
+
     .img{
-        width: 50px;
+        width: 60px;
         height: 70px;
     }
 }
