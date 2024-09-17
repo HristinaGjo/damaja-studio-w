@@ -174,8 +174,8 @@
 
         function scatterAndShrink() {
             gsap.to (".img", {
-                top:(i) => positions(i).top,
-                left:(i) => positions(i).left,
+                top:(i) => positions[i].top,
+                left:(i) => positions[i].left,
                 transform:"none",
                 width:"75px",
                 height:"100px",
@@ -183,7 +183,7 @@
                 duration:0.75,
                 ease:"power2.out",
             });
-        };
+        }s
 
     </script>
 </body>
