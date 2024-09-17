@@ -17,6 +17,7 @@ a{
     position: relative;
     text-decoration: none;
     color: #333333;
+    font-size: 16px;
 }
 
 .nav{
@@ -69,7 +70,8 @@ a{
 
 .text p{
     position: relative;
-    font-size: 18px;
+    font-size: 20px;
+    font-style: italic;
 }
 
 .text-revealer{
@@ -107,4 +109,109 @@ a{
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.mobile-nav{
+    display: none;
+}
+
+
+@media (max-width:768px){
+
+    a{
+        font-size: 14px;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .footer{
+        display: none;
+    }
+    .mobile-nav {
+        color: #333333;
+        padding: 1.5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .menu-toggle {
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .overlay {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 100%;
+        background-color: #000;
+        color: #f2f2f2;
+        display: flex;
+        justify-content: start;
+        padding: 0 4em;
+        align-items: center;
+        transition: left 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    .nav-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10em;
+        text-align: left;
+    }
+
+    .main-links,
+    .secondary-links {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+    }
+    
+    .main-links a {
+        font-size: 2.5em;
+        text-decoration: none;
+        color: #f2f2f2;
+        margin: 0;
+        /*display: inline-block;
+        transition: color 0.3s;*/
+    }
+
+    .copy-rights{
+        position: absolute;
+        bottom: 2em;
+    }
+
+    .secondary-links a {
+        font-size: 16px;
+        color: #f2f2f2;
+        font-weight: 200;
+        opacity: 0.5;
+        margin-top: 0.2em;
+    }
+
+    /*.main-links a:hover,
+    .secondary-links  a:hover {
+        color: #f39c12;
+    }*/
+
+/* Open the overlay on active */
+    .overlay.active {
+        left: 0;
+        color: #f2f2f2;
+    }
+
+    .img{
+        width: 50px;
+        height: 70px;
+    }
 }
