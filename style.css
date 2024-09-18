@@ -6,8 +6,8 @@
 
 html, body{
     width: 100vw;
-    height: 100vh;
-    /*overflow: hidden;*/
+    /*height: 100vh;*/
+    overflow: hidden;
     font-family: 'Helvetica';
     background: #f2f2f2;
     color: #333333;
@@ -234,6 +234,7 @@ a{
         grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
         grid-template-rows: auto; /* Auto row height */
         gap: 10px;
+        overflow-y: scroll;
     }
 
     .gallery .img:nth-child(1),
