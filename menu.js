@@ -8,7 +8,7 @@ menuToggle.addEventListener('click', () => {
         // Close the menu and go to homepage
         overlay.classList.remove('active');
         menuToggle.textContent = 'menu';  // Change the button back to 'Menu'
-        menuToggle.style.color = '#f2f2f2';  // Set text color to black
+        menuToggle.style.color = '#333';  // Set text color to black
         
         // Redirect to homepage (change 'index.html' or '/' to your home URL if needed)
         window.location.href = "index.html";  // You can adjust the URL based on your homepage route
