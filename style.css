@@ -228,11 +228,34 @@ a{
         font-style: italic;
     }
 
-    .gallery{
-        width: 100%;
-        height:auto;
-        position: relative;
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        grid-template-rows: auto; /* Auto row height */
+        gap: 10px;
     }
+
+    .gallery .img:nth-child(1),
+    .gallery .img:nth-child(2),
+    .gallery .img:nth-child(3) {
+        grid-column: span 1; /* First row with 3 images */
+    }
+
+    .gallery .img:nth-child(4),
+    .gallery .img:nth-child(5),
+    .gallery .img:nth-child(6),
+    .gallery .img:nth-child(7),
+    .gallery .img:nth-child(8),
+    .gallery .img:nth-child(9),
+    .gallery .img:nth-child(10),
+    .gallery .img:nth-child(11),
+    .gallery .img:nth-child(12),
+    .gallery .img:nth-child(13),
+    .gallery .img:nth-child(14) {
+        grid-column: span 1; /* Two images per row after the first row */
+    }
+
 
     .img{
         width: 60px;
