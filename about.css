@@ -208,4 +208,51 @@ img{
         left: 0;
         color: #f2f2f2;
     }
+
+    /*.container{
+        overflow-y: hidden;
+    }*/
+
+    h1{
+        font-size: 2.461rem;
+        margin: 0;
+        display: inline-block;
+        text-wrap: nowrap;
+    }
+
+    .img{
+        position: absolute;
+        top: calc(100% - 225px);
+        left: 56%;
+        width: 150px;
+        height: auto;
+    }
+    
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .about-ctn{
+        width: 200px;
+        height: auto;
+        position: absolute;
+        left: 10%;
+        top: 7%;
+    }
+
+    .clients{
+        position: absolute;
+        top: 60%;
+        left: 10%;
+    }
+    
+    .contact{
+        position: absolute;
+        left: 10%;
+        top: 80%;
+        display: flex;
+        flex-direction: column;
+    }
 }
