@@ -6,7 +6,7 @@
 
 html, body{
     width: 100vw;
-    height: auto;
+    /*min-height: 100vh;*/
     /*height: 100vh;*/
     overflow-x: hidden;
     font-family: 'Helvetica';
@@ -100,7 +100,7 @@ a{
 .img{
     width: 75px;
     height: 100px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: absolute;
     margin: 20px;
 }
@@ -183,8 +183,6 @@ a{
         text-decoration: none;
         color: #f2f2f2;
         margin: 0;
-        /*display: inline-block;
-        transition: color 0.3s;*/
     }
 
     .copy-rights{
@@ -200,12 +198,6 @@ a{
         margin-top: 0.2em;
     }
 
-    /*.main-links a:hover,
-    .secondary-links  a:hover {
-        color: #f39c12;
-    }*/
-
-/* Open the overlay on active */
     .overlay.active {
         left: 0;
         color: #f2f2f2;
@@ -231,12 +223,11 @@ a{
 
     .gallery {
         width: 100%;
-        display: grid;
-        overflow-y: scroll; 
+        overflow-y: auto; 
         overflow-x: hidden;
+        box-sizing: border-box;
         padding-left: 1.5em;
         padding-right: 1.5em;
-        margin-bottom: 3em;
     }
 
     .img {
