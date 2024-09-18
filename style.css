@@ -235,7 +235,8 @@ a{
         grid-template-rows: auto; /* Auto row height */
         gap: 10px;
         overflow-y: scroll;
-        padding-bottom: 2em;
+        box-sizing: border-box;
+        padding: 1.5em;
     }
 
 }
