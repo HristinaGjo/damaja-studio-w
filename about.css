@@ -235,7 +235,7 @@ img{
     }
     
     .about-ctn{
-        width: 200px;
+        width: 250px;
         height: auto;
         position: absolute;
         left: 10%;
@@ -244,14 +244,14 @@ img{
 
     .clients{
         position: absolute;
-        top: 60%;
+        top: 55%;
         left: 10%;
     }
     
     .contact{
         position: absolute;
         left: 10%;
-        top: 80%;
+        top: 85%;
         display: flex;
         flex-direction: column;
     }
