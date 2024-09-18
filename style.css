@@ -239,8 +239,9 @@ a{
         width: 100%;
         overflow-y: auto; 
         overflow-x: hidden;
-        box-sizing: border-box;
-        margin-bottom: 2em;
+        height: calc(100vh - 20px);
+        position: relative;
+        /*margin-bottom: 2em;*/
         /*margin-top: 2em;*/
     }
 
