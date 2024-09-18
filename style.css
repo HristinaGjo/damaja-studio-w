@@ -117,6 +117,13 @@ a{
 }
 
 
+.overlay{
+    display: none;
+}
+
+
+
+
 @media (max-width:768px){
 
     a{
@@ -130,7 +137,9 @@ a{
     .footer{
         display: none;
     }
+
     .mobile-nav {
+        
         color: #333333;
         padding: 1.5em;
         display: flex;
@@ -143,6 +152,7 @@ a{
     }
 
     .menu-toggle {
+        display: block;
         cursor: pointer;
         font-size: 20px;
     }
