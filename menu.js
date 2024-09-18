@@ -8,10 +8,10 @@ menuToggle.addEventListener('click', () => {
         // Close the menu and go to homepage
         overlay.classList.remove('active');
         menuToggle.textContent = 'menu';  // Change the button back to 'Menu'
-        menuToggle.style.color = '#333333';  // Set text color to black
+        menuToggle.style.color = '#f2f2f2';  // Set text color to black
         
         // Redirect to homepage (change 'index.html' or '/' to your home URL if needed)
-        window.location.href = "https://hristinagjo.github.io/damaja-studio/#";  // You can adjust the URL based on your homepage route
+        window.location.href = "/home.html";  // You can adjust the URL based on your homepage route
 
     } else {
         // Open the menu

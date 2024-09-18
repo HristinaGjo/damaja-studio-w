@@ -157,6 +157,10 @@ a{
         font-size: 20px;
     }
 
+    .menu-toggle a{
+        color: #f2f2f2;
+    }
+
     .overlay {
         position: fixed;
         height: 100%;
