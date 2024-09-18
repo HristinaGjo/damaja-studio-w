@@ -11,7 +11,7 @@ menuToggle.addEventListener('click', () => {
         menuToggle.style.color = '#f2f2f2';  // Set text color to black
         
         // Redirect to homepage (change 'index.html' or '/' to your home URL if needed)
-        window.location.href = "https://hristinagjo.github.io/damaja-studio/";  // You can adjust the URL based on your homepage route
+        window.location.href = "index.html";  // You can adjust the URL based on your homepage route
 
     } else {
         // Open the menu
