@@ -102,7 +102,7 @@
             <div class="logo" id="logo">
                 <a href="https://hristinagjo.github.io/damaja-studio/">damaja</a>
             </div>
-            <div class="menu-toggle" id="menuToggle">menu</div>
+            <div class="menu-toggle" id="menuToggle"><a>menu</a></div>
         </div>
 
         <div class="overlay" id="overlay">
@@ -394,6 +394,18 @@ function runMobileAnimation() {
             onComplete: () => {
                 document.querySelector(".header").remove();
             },
+        });
+
+
+        gsap.from ("a", {
+            y:20,
+            opacity:0,
+            ease:"power2.out",
+            duration:1,
+            stagger:{
+                amount:0.15,
+            },
+            delay:4,
         });
 
         function scatterAndShrinkMobile() {
