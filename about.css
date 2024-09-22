@@ -25,7 +25,7 @@ a{
     position: relative;
     text-decoration: none;
     color: #333;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .nav{
@@ -144,8 +144,7 @@ img{
     }
 
     #logo a{
-        font-size: 16px;
-        font-size: 600;
+        font-size: 14px;
     }
 
     .menu-toggle {
