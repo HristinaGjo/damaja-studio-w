@@ -355,7 +355,7 @@
 
         // Apply blur effect to the page except enlarged images
         function applyBlurEffect() {
-            const elementsToBlur = document.querySelectorAll('.mobile-nav, .img:not([data-enlarged="true"])');
+            const elementsToBlur = document.querySelectorAll('.mobile-nav, .logo, .img:not([data-enlarged="true"])');
             gsap.to(elementsToBlur, {
                 filter: 'blur(20px)',
                 duration: 0.75,
@@ -365,7 +365,7 @@
 
         // Remove blur effect
         function removeBlurEffect() {
-            const elementsToBlur = document.querySelectorAll('.mobile-nav, .img:not([data-enlarged="true"])');
+            const elementsToBlur = document.querySelectorAll('.mobile-nav, .logo, .img:not([data-enlarged="true"])');
             gsap.to(elementsToBlur, {
                 filter: 'blur(0px)',
                 duration: 1,
