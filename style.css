@@ -239,28 +239,44 @@ a{
         font-style: italic;
     } 
 
-    .gallery {
-        display: flex;
-        flex-direction: column;
+    .gallery{
+        display: none;
+    }
+
+    .gallery-mobile {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-gap: 1em;
+        padding-top: 4em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 1em;
+    }
+
+    .img-mobile {
         width: 100%;
+        height: 0;
+        padding-bottom: 100%; /* Aspect ratio of 1:1 (square) */
         position: relative;
-        overflow-y: auto; 
-        overflow-x: hidden;
-        /*height: calc(100vh + 50px);*/
-        position: relative;
-        margin-bottom: 2em;
-        /*margin-bottom: 2em;*/
-        /*margin-top: 2em;*/
     }
 
-    .img {
-        width: 85px;
-        height: 110px;
-    }
-
-    .img img {
-        object-fit: cover;
+    .img-mobile img {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
+
+    /* Adjust specific rows to have 2 images instead of 3 */
+    .gallery-mobile .img-mobile:nth-child(1),
+
+    .gallery-mobile .img-mobile:nth-child(4),
+    .gallery-mobile .img-mobile:nth-child(7),
+    .gallery-mobile .img-mobile:nth-child(8) {
+        grid-column: span 2; /* These images will span across 2 columns */
+    }
+
 }
