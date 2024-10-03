@@ -21,3 +21,5 @@ menuToggle.addEventListener('click', () => {
         menuToggle.style.fontWeight = '200'; 
     }
 });
+
+

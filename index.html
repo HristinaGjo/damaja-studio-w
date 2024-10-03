@@ -280,7 +280,26 @@
         })
     }
 
-    const mobilePositions = [
+    /*const mobilePositions = [
+        {top: "5%", left: "0%"},
+        {top: "5%", left: "43%"},
+        {top: "5%", left: "68%"},
+        {top: "22%", left: "43%"},
+        {top: "22%", left: "68%"},
+        {top: "39%", left: "0%"},
+        {top: "39%", left: "43%"},
+        {top: "56%", left: "0%"},
+        {top: "56%", left: "25%"},
+        {top: "73%", left: "68%"},
+        {top: "73%", left: "43%"},
+        {top: "90%", left: "0%"},
+        {top: "90%", left: "43%"},
+        {top: "90%", left: "68%"}
+    ]; */
+
+
+
+const mobilePositions = [
         {top: "5%", left: "0%"},
         {top: "5%", left: "43%"},
         {top: "5%", left: "68%"},
@@ -298,188 +317,80 @@
     ];
 
 function runMobileAnimation() {
-        gsap.set(".img", {
-            top: "45%",
-            left: "45%",
-            transform: "translate(-50%, -50%) scale(0)",
-        });
+    gsap.set(".img", {
+        top: "45%",
+        left: "45%",
+        transform: "translate(-50%, -50%) scale(0)",
+    });
 
+    gsap.from("p", {
+        y: 40,
+        ease: "power4.inOut",
+        duration: 1,
+        stagger: {
+            amount: 0.15,
+        },
+        delay: 0.5,
+    });
+
+    gsap.to(".img", {
+        scale: 1,
+        width: "190px",
+        height: "290px",
+        stagger: 0.15,
+        duration: 0.75,
+        ease: "power2.out",
+        delay: 1,
+        onComplete: scatterAndShrinkMobile,
+    });
+
+    gsap.to("p", {
+        top: "40px",
+        ease: "power4.inOut",
+        duration: 1,
+        stagger: {
+            amount: 0.15,
+        },
+        delay: 3,
+        onComplete: () => {
+            document.querySelector(".header").remove();
+        },
+    }); 
+
+    gsap.from("a", {
+        y: 20,
+        opacity: 0,
+        ease: "power2.out",
+        duration: 1,
+        stagger: {
+            amount: 0.15,
+        },
+        delay: 4,
+    });
+
+    function scatterAndShrinkMobile() {
         gsap.to(".img", {
-            scale: 1,
-            width: "190px",
-            height: "290px",
-            stagger: 0.15,
+            top: (i) => mobilePositions[i].top,
+            left: (i) => mobilePositions[i].left,
+            transform: "none",
+            width: "85px",
+            height: "110px",
+            /*width: "85px",
+            height: "110px",*/
+            stagger: 0.075,
             duration: 0.75,
             ease: "power2.out",
-            delay: 1,
-            onComplete: scatterAndShrinkMobile,
-        });
-
-        gsap.from ("a", {
-            y:20,
-            opacity:0,
-            ease:"power2.out",
-            duration:1,
-            stagger:{
-                amount:0.15,
-            },
-            delay:4,
-        });
-
-        function scatterAndShrinkMobile() {
-            gsap.to(".img", {
-                top: (i) => mobilePositions[i].top,
-                left: (i) => mobilePositions[i].left,
-                transform: "none",
-                width: "85px",
-                height: "110px",
-                stagger: 0.075,
-                duration: 0.75,
-                ease: "power2.out",
-            });
-        }
-
-        // Apply blur effect to the page except enlarged images
-        function applyBlurEffect() {
-            const elementsToBlur = document.querySelectorAll('.mobile-nav, .logo, .img:not([data-enlarged="true"])');
-            gsap.to(elementsToBlur, {
-                filter: 'blur(5px)',
-                duration: 0.75,
-                ease: "power2.out"
-            });
-        }
-
-        // Remove blur effect
-        function removeBlurEffect() {
-            const elementsToBlur = document.querySelectorAll('.mobile-nav, .logo, .img:not([data-enlarged="true"])');
-            gsap.to(elementsToBlur, {
-                filter: 'blur(0px)',
-                duration: 1,
-                ease: "power2.out"
-            });
-        }
-
-        // Toggle image size on click
-        function toggleImageSize(event) {
-            const img = event.currentTarget;
-            const isEnlarged = img.getAttribute('data-enlarged') === 'true';
-            const originalPosition = JSON.parse(img.getAttribute('data-original-position'));
-            const viewportWidth = window.innerWidth;
-            const viewportHeight = window.innerHeight;
-
-            if (!isEnlarged) {
-                const enlargedWidth = 300;
-                const enlargedHeight = 500;
-                const centeredLeft = (viewportWidth - enlargedWidth) / 2;
-                const centeredTop = (viewportHeight - enlargedHeight) / 2;
-
-                gsap.to(img, {
-                    zIndex: 1000,
-                    top: centeredTop + 'px',
-                    left: centeredLeft + 'px',
-                    width: enlargedWidth + 'px',
-                    height: enlargedHeight + 'px',
-                    ease: "power4.out",
-                    duration: 1,
-                });
-                img.setAttribute('data-enlarged', 'true');
-                applyBlurEffect();
-            } else {
-                setTimeout(() => removeBlurEffect(), 100);
-
-                gsap.to(img, {
-                    zIndex: 1,
-                    top: originalPosition.top,
-                    left: originalPosition.left,
-                    width: '85px',
-                    height: '110px',
-                    ease: "power4.out",
-                    duration: 1,
-                });
-                img.setAttribute('data-enlarged', 'false');
-            }
-        }
-
-        // Assign original position and click events to each image
-        const imgs = document.querySelectorAll(".img");
-        imgs.forEach((img, i) => {
-            img.setAttribute('data-original-position', JSON.stringify(mobilePositions[i]));
-            img.setAttribute('data-enlarged', 'false');
-            img.addEventListener('click', toggleImageSize);
         });
     }
-
+}
 
     // Detect screen size and run the appropriate animation
     if (window.innerWidth <= 768) {
-        // Run mobile-specific animation
         runMobileAnimation();
     } else {
-        // Run desktop-specific animation
         runDesktopAnimation();
     }
-
-
-
-    /*function runMobileAnimation() {
-
-        gsap.set (".img", {
-        top:"45%",
-        left:"45%",
-        transform:"translate(-50%, -50%) scale(0)",
-    });
-
-        gsap.from("p", {
-        y:40,
-        ease:"power4.inOut",
-        duration:1,
-        stagger:{
-            amount:0.15,
-        },
-        delay:0.5,
-    });
-
-        gsap.to (".img", {
-        scale:1,
-        width:"190px",
-        height:"290px",
-        stagger:0.15,
-        duration:0.75,
-        ease:"power2.out",
-        delay:1,
-        onComplete:scatterAndShrinkMobile,
-    });
-
-        gsap.to ("p", {
-        top:"40px",
-        ease:"power4.inOut",
-        duration:1,
-        stagger:{
-            amount:0.15,
-        },
-        delay:3,
-        onComplete: () => {
-        document.querySelector(".header").remove();
-        },
-    });
-
-
-    function scatterAndShrinkMobile() {
-        gsap.to (".img", {
-        top:(i) => mobilePositions[i].top,
-        left:(i) => mobilePositions[i].left,
-        transform:"none",
-        width:"85px",
-        height:"110px",
-        stagger:0.075,
-        duration:0.75,
-        ease:"power2.out",
-    });
-    }
-}*/
     </script>
     <script src="menu.js"></script>
 </body>
 </html>
-
-
