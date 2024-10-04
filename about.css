@@ -216,6 +216,7 @@ img{
         text-decoration: none;
         color: #f2f2f2;
         margin: 0;
+
     }
 
     .copy-rights{
@@ -229,6 +230,7 @@ img{
         font-weight: 200;
         opacity: 0.5;
         margin-top: 0.2em;
+        text-transform: lowercase;
     }
 
     .overlay.active {
