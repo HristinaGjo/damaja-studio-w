@@ -287,7 +287,7 @@ a{
     .about-text{
         width: 100%;
         box-sizing: border-box;
-        padding:4em 1.5em 0em 1.5em;
+        padding:6em 1.5em 0em 1.5em;
     }
 
     h1{
@@ -336,6 +336,58 @@ a{
         height: 100%;
         object-fit: cover;
         object-position: center;
+    }
+
+    .footer-mobile{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding-top: 4em;
+        box-sizing: border-box;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-bottom: 1.5em;
+        font-weight: 600;
+        gap: 2em;
+    }
+
+    .footer-mobile a{
+        font-size: 14px;
+        text-transform: lowercase;
+        font-weight: 600;
+    }
+
+    .right-ctn{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 3em;
+    }
+
+    .location{
+        display: flex;
+        flex-direction: column;
+        gap: 0.2em;
+    }
+
+    .location :nth-child(2){
+        font-size: 14px;
+    }
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .email span{
+        font-size: 14px;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+        gap: 0.2em;
     }
     
     /*.about-ctn{
