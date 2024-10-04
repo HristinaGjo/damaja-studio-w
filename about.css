@@ -264,7 +264,7 @@ img{
 
     .header{
         position: absolute;
-        top: 35%;
+        top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -278,14 +278,14 @@ img{
 
     .clients{
         position: absolute;
-        top: 45%;
+        top: 50%;
         /*left: 10%;*/
         left: 1.5em;
     }
 
     .img{
         position: absolute;
-        top: calc(100% - 255px);
+        top: calc(100% - 225px);
         left: 56%;
         width: 150px;
         height: auto;
