@@ -1,6 +1,6 @@
 const menuToggle = document.getElementById('menuToggle');
 const overlay = document.getElementById('overlay');
-const logo = document.getElementsByClassName('logo')
+const logo = document.getElementsById('logo')
 
 // Toggle overlay menu on click
 menuToggle.addEventListener('click', () => {
