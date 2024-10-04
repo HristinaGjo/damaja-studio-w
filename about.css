@@ -26,7 +26,7 @@ a{
     position: relative;
     text-decoration: none;
     color: #333;
-    font-size: 12px;
+    font-size: 10px;
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -36,7 +36,8 @@ a{
     height: 60px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    padding: 0 2em;
+    padding: 0 1.5em;
+    /*padding: 0 2em;*/
     align-items: center;
 }
 
@@ -46,7 +47,8 @@ a{
     bottom: 0;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    padding: 2em;
+    padding:1.5em 1.5em;
+    /*padding:1.5em 2em;*/
     align-items: center;
 }
 
@@ -303,7 +305,7 @@ img{
         position: absolute;
         /*left: 10%;*/
         left: 1.5em;
-        top: 80%;
+        top: 78%;
         display: flex;
         flex-direction: column;
         gap: 0.1em;
@@ -313,7 +315,7 @@ img{
         padding-top: 1em;
         display: flex;
         flex-direction: column;
-        gap: 0.2em;
+        gap: 0.1em;
     }
 
     .contact a{

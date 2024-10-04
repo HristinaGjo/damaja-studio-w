@@ -18,7 +18,8 @@ a{
     position: relative;
     text-decoration: none;
     color: #333;
-    font-size: 12px;
+    font-size: 10px;
+    /*font-size: 12px;*/
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 600;
@@ -29,7 +30,8 @@ a{
     height: 60px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    padding: 0 2em;
+    /*padding:0 2em;*/
+    padding: 0 1.5em;
     align-items: center;
 }
 
@@ -39,7 +41,8 @@ a{
     bottom: 0;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    padding:1.5em 2em;
+    padding:1.5em 1.5em;
+    /*padding:1.5em 2em;*/
     align-items: center;
     z-index: 10;
 }
