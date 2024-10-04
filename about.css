@@ -285,7 +285,7 @@ a{
     }
 
     .about-text{
-        width: 100%;
+        width: 85%;
         box-sizing: border-box;
         padding:6em 1.5em 0em 1.5em;
     }
@@ -296,18 +296,6 @@ a{
         display: inline-block;
         text-wrap: nowrap;
     }
-
-    /*.mobile-content{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        width: 100%;
-        box-sizing: border-box;
-        padding-left: 1.5em;
-    }
-
-    .left{
-        grid-column: 1;
-    }*/
 
     .mobile-content{
         display: flex;
