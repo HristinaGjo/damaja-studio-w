@@ -312,6 +312,8 @@ a{
     .mobile-content{
         display: flex;
         flex-direction: row;
+        justify-content: start;
+        align-items: start;
         box-sizing: border-box;
         padding: 1.5em;
         justify-content: space-between;
@@ -324,8 +326,9 @@ a{
 
     .img{
         width: 200px;
-        height: 300px;
+        height: auto;
         margin-top: 3vw;
+        display: flex;
     }
     
     .img img{
