@@ -241,9 +241,32 @@ img{
         text-transform: lowercase;
     }
 
+    .links-menu{
+        padding-top: 1.5em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.1em;
+    }
+
     .overlay.active {
         left: 0;
         color: #f2f2f2;
+    }
+    
+    .about-ctn{
+        width: 85%;
+        box-sizing: border-box;
+        height: auto;
+        position: absolute;
+        left: 1.5em;
+        top: 10%;
+    }
+
+    .header{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     h1{
@@ -251,6 +274,13 @@ img{
         margin: 0;
         display: inline-block;
         text-wrap: nowrap;
+    }
+
+    .clients{
+        position: absolute;
+        top: 50%;
+        /*left: 10%;*/
+        left: 1.5em;
     }
 
     .img{
@@ -267,30 +297,14 @@ img{
         object-fit: cover;
     }
     
-    .about-ctn{
-        width: 70%;
-        box-sizing: border-box;
-        height: auto;
-        position: absolute;
-        left: 1.5em;
-        top: 10%;
-    }
-
-    .clients{
-        position: absolute;
-        top: 55%;
-        /*left: 10%;*/
-        left: 1.5em;
-    }
-    
     .contact{
         position: absolute;
         /*left: 10%;*/
         left: 1.5em;
-        top: 82%;
+        top: 75%;
         display: flex;
         flex-direction: column;
-        gap: 0.2em;
+        gap: 0.1em;
     }
 
     .links{
@@ -298,13 +312,6 @@ img{
         display: flex;
         flex-direction: column;
         gap: 0.2em;
-    }
-
-    .links-menu{
-        padding-top: 1.5em;
-        display: flex;
-        flex-direction: column;
-        gap: 0.1em;
     }
 
     .contact a{
