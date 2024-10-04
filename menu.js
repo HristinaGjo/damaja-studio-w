@@ -16,9 +16,9 @@ menuToggle.addEventListener('click', () => {
     } else {
         // Open the menu
         overlay.classList.add('active');
-        menuToggle.textContent = 'close';  // Change the button text to 'Close'
+        menuToggle.textContent = 'CLOSE';  // Change the button text to 'Close'
         menuToggle.style.color = '#f2f2f2';  // Set text color to white
-        menuToggle.style.fontWeight = '200'; 
+        /*menuToggle.style.fontWeight = '200'; */
     }
 });
 
