@@ -222,7 +222,17 @@ img{
     .copy-rights{
         position: absolute;
         bottom: 2em;
+        font-size: 14px;
     }
+
+    .secondary-links p {
+        font-size: 16px;
+        color: #f2f2f2;
+        font-weight: 200;
+        opacity: 0.5;
+        margin-top: 0.2em;
+    }
+
 
     .secondary-links a {
         font-size: 16px;
@@ -287,6 +297,13 @@ img{
 
     .links{
         padding-top: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2em;
+    }
+
+    .links-menu{
+        padding-top: 2em;
         display: flex;
         flex-direction: column;
         gap: 0.2em;
