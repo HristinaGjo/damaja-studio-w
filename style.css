@@ -136,9 +136,9 @@ a{
 
 @media (max-width:768px){
 
-    /*a{
+    a{
         font-size: 12px;
-    }*/
+    }
 
     .nav{
         display: none;

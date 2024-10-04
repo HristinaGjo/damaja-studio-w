@@ -65,7 +65,8 @@ a{
     gap: 2em;
 }
 
-.mobile-nav{
+.mobile-nav,
+.about-page-mobile{
     display: none;
 }
 
@@ -73,59 +74,45 @@ a{
     display: none;
 }
 
-.header{
+/*.header{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+} */
+
+.about-page{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    box-sizing: border-box;
+    padding-top: 2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
 }
 
-.img{
-    position: absolute;
-    top: calc(100% - 350px);
-    left: 62%;
-    width: 250px;
-    height: auto;
-    overflow: hidden;
+.about-content{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
+    gap: 1em;
 }
 
-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
-}
-
-.about-ctn{
-    width: 210px;
-    height: auto;
-    position: absolute;
-    left: 40%;
-}
-
-.about-text p,
-.clients p,
-.contact p,
-.contact a{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 110%;
+.about-text{
+    grid-column: 2 /span 2;
+    width: 90%;
 }
 
 .clients{
-    position: absolute;
-    left: 57%;
-}
-
-.contact{
-    position: absolute;
-    left: 68%;
+    width: 100%;
+    grid-column: 4;
     display: flex;
     flex-direction: column;
 }
 
-.contact a{
-    text-transform: lowercase;
+.contact{
+    grid-column: 5;
+    font-size: 16px;
+    margin-left: -8vw;
 }
 
 .links{
@@ -133,6 +120,38 @@ img{
     flex-direction: column;
     padding-top: 1em;
 }
+
+.links a,
+.contact a{
+    text-transform: lowercase;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.header{
+    grid-row: 2;
+    grid-column: 3 /span 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    width: 300px;
+    height: 360px;
+    grid-row: 3;
+    grid-column: 4;
+    margin-top: 3vw;
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 
 @media (max-width:768px) {
     a{
@@ -254,8 +273,69 @@ img{
         left: 0;
         color: #f2f2f2;
     }
+
+    .about-page{
+        display: none;
+    }
+
+    .about-page-mobile{
+        display: flex;
+        flex-direction: column;
+        gap: 18vw;
+    }
+
+    .about-text{
+        width: 100%;
+        box-sizing: border-box;
+        padding:4em 1.5em 0em 1.5em;
+    }
+
+    h1{
+        font-size: 2.461rem;
+        margin: 0;
+        display: inline-block;
+        text-wrap: nowrap;
+    }
+
+    /*.mobile-content{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 1.5em;
+    }
+
+    .left{
+        grid-column: 1;
+    }*/
+
+    .mobile-content{
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        padding: 1.5em;
+        justify-content: space-between;
+    }
+
+    .contact{
+        margin-left: 0;
+        padding-top: 1em;
+    }
+
+    .img{
+        width: 200px;
+        height: 300px;
+        margin-top: 3vw;
+    }
     
-    .about-ctn{
+    .img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    /*.about-ctn{
         width: 90vw;
         box-sizing: border-box;
         height: auto;
@@ -281,7 +361,6 @@ img{
     .clients{
         position: absolute;
         top: 50%;
-        /*left: 10%;*/
         left: 1.5em;
     }
 
@@ -303,7 +382,6 @@ img{
     
     .contact{
         position: absolute;
-        /*left: 10%;*/
         left: 1.5em;
         top: 78%;
         display: flex;
@@ -311,7 +389,6 @@ img{
         gap: 0.1em;
     }
 
-    
     .links{
         padding-top: 1em;
         display: flex;
@@ -321,5 +398,60 @@ img{
 
     .contact a{
         text-transform: lowercase;
-    }
+    }*/
 }
+
+
+/*.img{
+    position: absolute;
+    top: calc(100% - 350px);
+    left: 62%;
+    width: 250px;
+    height: auto;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}*/
+
+/*.about-ctn{
+    width: 210px;
+    height: auto;
+    position: absolute;
+    left: 40%;
+}
+
+.about-text p,
+.clients p,
+.contact p,
+.contact a{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+}
+
+.clients{
+    position: absolute;
+    left: 57%;
+}
+
+.contact{
+    position: absolute;
+    left: 68%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact a{
+    text-transform: lowercase;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+}*/
