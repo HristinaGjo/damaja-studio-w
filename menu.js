@@ -1,6 +1,6 @@
 const menuToggle = document.getElementById('menuToggle');
 const overlay = document.getElementById('overlay');
-const logo = document.getElementById('logo')
+const logo = document.getElementsByClassName('logo')
 
 // Toggle overlay menu on click
 menuToggle.addEventListener('click', () => {
@@ -11,10 +11,10 @@ menuToggle.addEventListener('click', () => {
         menuToggle.textContent = 'menu';  // Change the button back to 'Menu'
         menuToggle.style.color = '#333';  // Set text color to black
 
-        logo.style.display = 'block';
+        logo.style.visibility = 'visible';
         
         // Redirect to homepage (change 'index.html' or '/' to your home URL if needed)
-        window.location.href = "https://hristinagjo.github.io/damaja-studio/";  // You can adjust the URL based on your homepage route
+        /*window.location.href = "https://hristinagjo.github.io/damaja-studio/";  // You can adjust the URL based on your homepage route*/
 
     } else {
         // Open the menu
@@ -23,7 +23,7 @@ menuToggle.addEventListener('click', () => {
         menuToggle.style.color = '#f2f2f2';  // Set text color to white
         /*menuToggle.style.fontWeight = '200'; */
 
-        logo.style.display = 'none'
+        logo.style.visibility = 'hidden';
     }
 });
 
